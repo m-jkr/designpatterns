@@ -11,7 +11,7 @@ namespace INSADesignPattern.InputStrategies
     {
         public bool RunInputStrategy()
         {
-            Console.WriteLine("Hello, what's your name ?");//test
+            Console.WriteLine("Hello, what's your name ?");
             Program.UserName = Console.ReadLine();
             Console.WriteLine($"Hello, {Program.UserName}, nice to meet you.");
             Program.UserSaidHello();

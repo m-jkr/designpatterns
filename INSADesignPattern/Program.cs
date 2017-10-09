@@ -16,6 +16,7 @@ namespace INSADesignPattern
         private static HelloObservable helloObservable;
         public static string UserName = "<User>";
 
+
         private static int countHellos = 0;
 
         public static void UserSaidHello()
