@@ -1,4 +1,5 @@
-﻿using System;
+﻿using INSADesignPattern.Composite;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,8 @@ namespace INSADesignPattern.Observer
 {
     class ObserverCompos
     {
+        //Après chaque trigger, il va unregister tout le dictionnaire de listeners, et il va prendre tous les children de CurrentComposite et il va les register
+
         /// <summary>
         /// The list of listeners
         /// </summary>
@@ -66,7 +69,22 @@ namespace INSADesignPattern.Observer
                 if (!observable.Execute())
                     return true;
             }
+            //Méthode à appeler ici
+            ManageComposite();
 
+            return true;
+        }
+
+        public bool ManageComposite()
+        {
+            listeners.Clear();
+            List<IComposite> tmpList = Program.context.CurrentComposite.GetChildren();
+
+            foreach (IComposite compos in tmpList)
+            {
+                Register(compos.GetKeyWord(), compos.GetObservable());
+            }
+            
             return true;
         }
     }

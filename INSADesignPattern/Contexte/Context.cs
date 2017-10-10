@@ -10,9 +10,12 @@ namespace INSADesignPattern.Contexte
     class Context
     {
         public string Username { get; set; }
-
-        public IComposite Composite { get; set; }
-
-      
+        public IComposite CurrentComposite { get; set; }
+        
+        public Context()
+        {
+            Username = "< User >";
+            CurrentComposite = null;
+        }
     }
 }

@@ -44,10 +44,12 @@
   <ItemGroup>
     <Compile Include="Composite\Composite.cs" />
     <Compile Include="Composite\IComposite.cs" />
-    <Compile Include="Contexte\Class1.cs" />
+    <Compile Include="Contexte\Context.cs" />
     <Compile Include="InputStrategies\FirstHelloStrategy.cs" />
     <Compile Include="InputStrategies\LastHelloStrategy.cs" />
     <Compile Include="InputStrategies\SecondHelloStrategy.cs" />
+    <Compile Include="Observables\AlreadyObservable.cs" />
+    <Compile Include="Observables\CompositeObservable.cs" />
     <Compile Include="Observables\HelloObservable.cs" />
     <Compile Include="Observables\SmileyObservable.cs" />
     <Compile Include="Observer\Observer.cs" />

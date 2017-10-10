@@ -12,5 +12,10 @@ namespace INSADesignPattern.Composite
         string GetDescription();
         IObservable GetObservable();
         string GetKeyWord();
+        bool AddChild(IComposite child);
+        bool DisplayChildren();
+        List<IComposite> GetChildren();
+        
+
     }
 }
